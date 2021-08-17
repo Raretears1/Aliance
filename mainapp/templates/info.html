@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+  {% load static %}
+  {% block content %}
+
+
+<div class="card mb-3" style="max-width: 1000px; margin-top: 50px; border: 0px">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{% static 'images/irpinn.jpg' %}" style="width: 700px" >
+    </div>
+    <div class="col-md-8" style="margin-top: -390px; margin-left: 700px;">
+      <div class="card-body">
+        <font color="#8B4513"><h3 class="card-title" align="center">Альянс</h3></font>
+        <font color="#8B4513"><h5 class="card-title" align="center">Агенство нерухомості</h5></font>
+        {% for i in contact %}
+        <p class="card-text"><strong>Адреса: </strong>{{i.adress}}</p>
+{% endfor %}
+
+        {% for e in navbar %}
+        <p class="card-text"><strong>Номер телефону  : </strong>{{e.number1}}</p>
+          <p class="card-text"><strong>Номер телефону  : </strong> {{e.number2}}</p>
+        <p class="card-text"><strong>Пошта: </strong>{{e.email}}</p>
+        <p class="card-text"><strong>Наші соц-мережі: </strong></p><a style="color: #8B4513" href="{{e.inst}}"><h3>Instagram</h3> </a>
+        <p class="card-text"></p><a style="color: #8B4513" href="{{e.facebook}}"><h3>Facebook</h3> </a>
+
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}
