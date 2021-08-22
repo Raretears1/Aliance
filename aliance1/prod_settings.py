@@ -7,7 +7,7 @@ SECRET_KEY = 'django-insecure-yfl1$ax779wo*dsg462wfsw((&3%3)vgbp12mv+t*j!w+w8+wg
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["aliance-irpen.com.ua", "wwww.aliance-irpen.com.ua"]
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
